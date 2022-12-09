@@ -1,0 +1,33 @@
+$primary-color: #0c0c0c;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: $direction;
+    align-items: center;
+}
+
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin text($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin componentTitle() {
+    width: 400px;
+    height: 60px;
+    color: rgba(255, 255, 255, 0.856);
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+    text-shadow: rgb(0, 0, 0) 0px 5px 10px;
+    font-family: PT Sans Narrow,Open Sans,sans-serif;
+    margin-bottom: 5px;
+    pointer-events: none;
+    margin-bottom: 20px;
+}

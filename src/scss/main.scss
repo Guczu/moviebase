@@ -1,0 +1,18 @@
+@import './variables';
+@import './movieslider';
+@import './navbar';
+@import './mainpage';
+@import './moviesthisyear';
+@import './moviecard';
+@import './footer';
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: $primary-color;
+    color: white;
+    width: 100%;
+    margin: 0;
+}

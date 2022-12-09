@@ -1,0 +1,80 @@
+@mixin cardFont() {
+    font-family: PT Sans Narrow,Open Sans,sans-serif;
+    text-shadow: 0px 0px 6px rgba(134, 134, 134, 0.7);
+    letter-spacing: 2px;
+}
+
+.moviecard--container {
+    @include flexCenter(flex-end);
+    flex-direction: column;
+    width: 300px;
+    height: 550px;
+    background-color: #0c0c0c;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: rgba(48, 48, 48, 0.342) 0px 7px 29px 0px;
+    transition: .15s ease-out;
+        &:hover {
+            transform: translateY(-2%);
+            cursor: pointer;
+        }
+}
+
+.moviecard--poster {
+    @include flexCenter(center);
+    width: 300px;
+    height: 550px;
+        img {
+            filter: brightness(85%);
+            width: 280px;
+            height: 355px;
+            object-fit: cover;
+            position: absolute;
+            z-index: 0;
+            border-radius: 5px;
+            
+        }
+}
+
+.moviecard--info {
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+}
+
+.moviecard--title {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        p {
+            @include cardFont();
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+        }
+}
+
+.moviecard--genre {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    p {
+        @include cardFont();
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.moviecard--rating {
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    p {
+        @include cardFont();
+        margin: 0;
+        padding: 20px;
+        font-size: 25px;
+    }
+}

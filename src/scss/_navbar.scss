@@ -1,0 +1,121 @@
+.navbar--container {
+    @include flexCenter(center);
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+
+    .navbar--logo {
+        @include flexCenter(center);
+        @include sizes(150px,150px);
+        img {
+            @include sizes(50px,50px);
+            filter: brightness(90%);
+            transform: scale(1);
+            transition: transform .25s;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+                transition: transform .25s;
+            }
+        }
+    }
+
+    .navbar--options {
+        @include sizes(700px,150px);
+        @include flexCenter(start);
+        
+        ul {
+            @include flexCenter(center);
+            list-style-type: none;
+            li {
+                margin: 20px;
+                font-family: 'Noticia Text', serif;
+                .navbar--option {
+                    @include text(1rem, #dbdbdb);
+                    text-decoration: none;
+                    display: inline-block;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #ffffff;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+                    &:hover:after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar--search {
+        @include flexCenter(center);
+        @include sizes(400px,150px);
+        @include text(1.7rem, #dbdbdb);
+        
+        .navbar--searchbar {
+            @include sizes(300px,30px);
+            margin: 10px;
+            border-radius: 30px;
+            border: 1px solid #6d6b6b;
+            background-color: #0c0c0c;
+            color: rgb(224, 223, 223);
+            text-align: center;
+            outline: none;
+        }
+        button {
+                all: unset;
+                cursor: pointer;
+            &:hover {
+                opacity: .75;
+            }
+        }
+    }
+
+    .navbar--profile {
+        @include flexCenter(center);
+        @include sizes(150px,150px);
+        @include text(1.5rem, #dbdbdb);
+        i {
+            @include sizes(45px, 45px);
+            @include flexCenter(center);
+            border: 3px solid #dbdbdb;
+            border-radius: 30px;
+            &:hover {
+                opacity: .75;
+                background-color: #dbdbdb;
+                cursor: pointer;
+                border: 3px solid #dbdbdb;
+                transition: 0.1s ease-in;
+                color: black;
+            }
+        }
+    }
+}
+
+/*
+.navbar--dropdown {
+            text-align: center;
+            width: 300px;
+            height: 250px;
+            background-color: #1f1f1f;
+            position: absolute;
+            left: -125px;
+            z-index: 1;
+            border-radius: 10px;
+            display: none;
+}
+
+~.navbar--dropdown {
+    display:block;
+}
+*/

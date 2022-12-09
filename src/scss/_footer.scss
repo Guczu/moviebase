@@ -1,0 +1,48 @@
+.footer--maincontainer {
+    @include flexCenter(center);
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.footer--container {
+    @include flexCenter(center);
+    flex-direction: column;
+    width: 1800px;
+    height: 100px;
+
+    hr {
+        width: 600px;
+        height: 1px;
+        color: #1d1d1d;
+    }
+
+    .footer--socials {
+        display: flex;
+        .footer--icon {
+            @include flexCenter(center);
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            margin: 5px;
+            transition: 0.2s ;
+            i {
+                transform: scale(2);
+                color: lightgray;
+            }
+            &:hover {
+                cursor: pointer;
+                border-radius: 30px;
+                background-color: #1d1d1d;
+            }
+        }  
+    }
+
+    p {
+        font-family: PT Sans Narrow,Open Sans,sans-serif;
+        color: lightgray;
+        font-style: italic;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+    }
+}

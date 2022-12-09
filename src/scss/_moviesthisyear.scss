@@ -1,0 +1,22 @@
+
+.thisyear--maincontainer {
+    @include flexCenter(center);
+    flex-direction: column;
+    width: 100%;
+}
+
+.thisyear--container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    place-items: center;
+    width: 1500px;
+}
+
+.thisyear--text {
+    @include flexCenter(center);
+}
+
+.thisyear--title {
+    @include flexCenter(center);
+    @include componentTitle;
+}
