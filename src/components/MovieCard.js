@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import poster from '../images/breakingbad.jpg';
 
 export default function MovieCard() {
+    const navigate = useNavigate();
+    const handleNav = () => {
+       navigate('/movie'); 
+    }  
+
     return (
-        <div className='moviecard--container'>
+        <div className='moviecard--container' onClick={handleNav}>
             <div className='moviecard--poster'>
                 <img src={poster}></img>
             </div>
